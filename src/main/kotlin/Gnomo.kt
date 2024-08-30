@@ -7,22 +7,11 @@ class Gnomo (nome: String) : Personagem(
     inteligencia = 0,
     sabedoria = 0,
     carisma = 0,
-    ModFinal = 0
+    modificador = ModificadorPadrao(),
+    bonusRacialStrategy = BonusRacialGnomo()
 ) {
     override fun mostrar() {
         super.mostrar()
     }
 
-    override fun calcularMod(valor: Int): Int {
-        return super.calcularMod(valor)
-    }
-
-    override fun aplicarBonusRacial() {
-        this.forca += 1
-        this.destreza += 1
-        this.constituicao += 1
-        this.inteligencia += 1
-        this.sabedoria += 1
-        this.carisma += 1
-    }
 }

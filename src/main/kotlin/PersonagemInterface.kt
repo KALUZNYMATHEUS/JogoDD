@@ -1,7 +1,6 @@
+import java.util.Scanner
 interface PersonagemInterface {
     fun mostrar()
-
-    fun calcularMod(valor: Int): Int
-
-    fun aplicarBonusRacial()
+    fun distribuirPontos(scanner: Scanner, personagem: Personagem, pontosDisponiveis : Int)
 }
+
