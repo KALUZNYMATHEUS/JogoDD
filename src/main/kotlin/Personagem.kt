@@ -12,6 +12,33 @@ open class Personagem(
     var bonusRacialStrategy: BonusRacialStrategy? = null
 ): PersonagemInterface{
 
+    init {
+        definirBonusRacial()
+    }
+
+    private fun definirBonusRacial() {
+        bonusRacialStrategy = when (raca) {
+            "Humano" -> BonusRacialHumano()
+            "Anão" -> BonusRacialAnao()
+            "Anão da Colina" -> BonusRacialAnaoDaColina()
+            "Anão da Montanha" -> BonusRacialAnaoDaMontanha()
+            "Draconato" -> BonusRacialDracono()
+            "Drow" -> BonusRacialDrow()
+            "Elfo" -> BonusRacialElfo()
+            "Elfo da Floresta" -> BonusRacialElfoDaFloresta()
+            "Gnomo" -> BonusRacialGnomo()
+            "Gnomo da Floresta" -> BonusRacialGnomoDaFloresta()
+            "Gnomo das Rochas" -> BonusRacialGnomoDasRochas()
+            "Halfling" -> BonusRacialHalfling()
+            "Halfling Pés-Leves" -> BonusRacialHalflingPesLeves()
+            "Halfling Robusto" -> BonusRacialHalflingRobusto()
+            "Meio-Elfo" -> BonusRacialMeioElfo()
+            "Orc" -> BonusRacialOrc()
+            "Tiefling" -> BonusRacialTiefling()
+            else -> null
+        }
+    }
+
     fun aplicarBonusRacial() {
         bonusRacialStrategy?.aplicarBonus(this)
     }
