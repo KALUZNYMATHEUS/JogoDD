@@ -16,7 +16,7 @@ open class Personagem(
         definirBonusRacial()
     }
 
-    private fun definirBonusRacial() {
+     fun definirBonusRacial() {
         bonusRacialStrategy = when (raca) {
             "Humano" -> BonusRacialHumano()
             "Anão" -> BonusRacialAnao()
