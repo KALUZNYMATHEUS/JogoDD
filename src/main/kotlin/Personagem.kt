@@ -16,6 +16,42 @@ open class Personagem(
         definirBonusRacial()
     }
 
+    fun validarAtributos(
+        nome: String,
+        forca: Int,
+        destreza: Int,
+        constituicao: Int,
+        inteligencia: Int,
+        sabedoria: Int,
+        carisma: Int
+    ): Boolean {
+        // Validar se o nome foi preenchido
+        if (nome.isBlank()) {
+            println("Nome inválido. O nome não pode estar vazio.")
+            return false
+        }
+
+        // Valida se cada atributo está entre 8 e 15
+        val atributosValidos = listOf(
+            "Força" to forca,
+            "Destreza" to destreza,
+            "Constituição" to constituicao,
+            "Inteligência" to inteligencia,
+            "Sabedoria" to sabedoria,
+            "Carisma" to carisma
+        )
+
+        for ((atributo, valor) in atributosValidos) {
+            if (valor !in 8..15) {
+                println("Valor inválido para $atributo. O valor deve estar entre 8 e 15.")
+                return false
+            }
+        }
+
+        // Se todos os valores forem válidos
+        return true
+    }
+
      fun definirBonusRacial() {
         bonusRacialStrategy = when (raca) {
             "Humano" -> BonusRacialHumano()
