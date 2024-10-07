@@ -150,6 +150,7 @@ open class Personagem(
                         if (pontosDisponiveis + custoAnterior >= custo) {
                             pontosDisponiveis = pontosDisponiveis + custoAnterior - custo
                             personagem.forca = pontos
+
                         } else {
                             println("Você não tem pontos suficientes.")
                         }
