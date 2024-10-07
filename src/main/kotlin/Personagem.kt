@@ -16,7 +16,7 @@ open class Personagem(
         definirBonusRacial()
     }
 
-    fun validarAtributos(
+    fun validarAtributosPersonagem(
         nome: String,
         forca: Int,
         destreza: Int,
