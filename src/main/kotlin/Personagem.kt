@@ -373,6 +373,105 @@ open class Personagem(
             }
         }
     }
+
+    fun bonus(): Map<String, Int> {
+        val bonus = mutableMapOf<String, Int>()
+
+        when (raca) {
+            "Humano" -> {
+                forca += 1
+                destreza += 1
+                constituicao += 1
+                inteligencia += 1
+                sabedoria += 1
+                carisma += 1
+
+                bonus["forca"] = 1
+                bonus["destreza"] = 1
+                bonus["constituicao"] = 1
+                bonus["inteligencia"] = 1
+                bonus["sabedoria"] = 1
+                bonus["carisma"] = 1
+            }
+            "Alto Elfo" -> {
+                inteligencia += 1
+                bonus["inteligencia"] = 1
+            }
+            "Anão" -> {
+                constituicao += 2
+                inteligencia += 1
+                bonus["constituicao"] = 2
+                bonus["inteligencia"] = 1
+            }
+            "Anão da Colina" -> {
+                sabedoria += 1
+                bonus["sabedoria"] = 1
+            }
+            "Anão da Montanha" -> {
+                forca += 2
+                bonus["forca"] = 2
+            }
+            "Dracono" -> {
+                forca += 2
+                carisma += 1
+                bonus["forca"] = 2
+                bonus["carisma"] = 1
+            }
+            "Drow" -> {
+                carisma += 1
+                bonus["carisma"] = 1
+            }
+            "Elfo" -> {
+                destreza += 2
+                bonus["destreza"] = 2
+            }
+            "Elfo da Floresta" -> {
+                sabedoria += 1
+                bonus["sabedoria"] = 1
+            }
+            "Gnomo" -> {
+                // Sem bônus específico definido, mas pode ser adicionado mais tarde
+            }
+            "Gnomo da Floresta" -> {
+                destreza += 2
+                bonus["destreza"] = 2
+            }
+            "Gnomo das Rochas" -> {
+                constituicao += 1
+                bonus["constituicao"] = 1
+            }
+            "Halfling" -> {
+                destreza += 2
+                bonus["destreza"] = 2
+            }
+            "Halfling Pé Leves" -> {
+                carisma += 1
+                bonus["carisma"] = 1
+            }
+            "Halfling Robusto" -> {
+                constituicao += 1
+                bonus["constituicao"] = 1
+            }
+            "Meio-Elfo" -> {
+                carisma += 2
+                bonus["carisma"] = 2
+            }
+            "Orc" -> {
+                forca += 2
+                bonus["forca"] = 2
+            }
+            "Tiefling" -> {
+                inteligencia += 1
+                carisma += 2
+                bonus["inteligencia"] = 1
+                bonus["carisma"] = 2
+            }
+            else -> throw IllegalArgumentException("Raça desconhecida: $raca")
+        }
+
+        return bonus
+    }
+
 }
 
 
