@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Gmail</string>
+    <string-array name="race_array">
+        <item>Anão</item>
+        <item>Elfo</item>
+        <item>Humano</item>
+        <item>Orc</item>
+        <item>Anão da Montanha</item>
+        <item>Dracono</item>
+        <item>Halfling</item>
+        <item>Halfling Robusto</item>
+        <item> Halfling Pes-Leves</item>
+        <item>Anão da Colina</item>
+        <item>Tiefling</item>
+        <item>Meio-Elfo</item>
+        <item>Gnomo Da Floresta</item>
+        <item>Alto Elfo</item>
+        <item>Gnomo Das Rochas</item>
+        <item>Elfo Da Floresta</item>
+        <item>Gnomo</item>
+        <item>Drow</item>
+    </string-array>
+
+    <string name="channel_name">My Notification Channel</string>
+    <string name="channel_description">Channel description</string>
+    <string name="gmail_icon">Ícone do Gmail</string>
+
+
+</resources>
